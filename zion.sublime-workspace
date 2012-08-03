@@ -1,0 +1,876 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"defer",
+				"defer_adaptor<class F>	class"
+			],
+			[
+				"BOOST_PP_IN",
+				"BOOST_PP_INTERCEPT	macro"
+			],
+			[
+				"ZELDA_PP_PA",
+				"ZELDA_PP_PARAMS(n, ...)	macro"
+			],
+			[
+				"ZELDA_FO",
+				"ZELDA_FORWARD_REF(...)	macro"
+			],
+			[
+				"fo",
+				"forward<class T>(typename boost::remove_reference<T>::type &t)	T &&"
+			],
+			[
+				"stati",
+				"static_assert"
+			],
+			[
+				"BOO",
+				"BOOST_PP_INTERCEPT"
+			],
+			[
+				"res",
+				"result_of"
+			],
+			[
+				"def",
+				"defined"
+			],
+			[
+				"defin",
+				"defined"
+			],
+			[
+				"if",
+				"ifdef"
+			],
+			[
+				"st",
+				"static_assert"
+			],
+			[
+				"bool",
+				"bool_"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"pip",
+				"pipable_adaptor"
+			],
+			[
+				"de",
+				"details"
+			],
+			[
+				"ZELDA",
+				"ZELDA_PP_REM"
+			],
+			[
+				"fow",
+				"forward_adaptor"
+			],
+			[
+				"BOOST",
+				"BOOST_PP_IF"
+			],
+			[
+				"ZELDA_FORW",
+				"ZELDA_FORWARD_REPEAT"
+			],
+			[
+				"const",
+				"const_seq"
+			],
+			[
+				"BOOST_PP_SEQ_FOR",
+				"BOOST_PP_SEQ_FOR_EACH_I"
+			],
+			[
+				"con",
+				"const_seq"
+			],
+			[
+				"for",
+				"forward_adaptor"
+			],
+			[
+				"result",
+				"result_of"
+			],
+			[
+				"BOOST_",
+				"BOOST_PP_INTERCEPT"
+			],
+			[
+				"ZELD",
+				"ZELDA_PP_PARAMS"
+			],
+			[
+				"ZE",
+				"ZELDA_PP_REM"
+			],
+			[
+				"xty",
+				"xtypeof_"
+			],
+			[
+				"__",
+				"__VA_ARGS__"
+			],
+			[
+				"typeof",
+				"typeof_detail"
+			],
+			[
+				"el",
+				"elif"
+			],
+			[
+				"LINQ",
+				"LINQ_RETURNS"
+			],
+			[
+				"in",
+				"inner_first"
+			],
+			[
+				"fir",
+				"outer_first"
+			],
+			[
+				"inn",
+				"inner_last"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"out",
+				"outer_first"
+			],
+			[
+				"inc",
+				"include <header>	"
+			],
+			[
+				"dec",
+				"declval<typename _Tp>()	typename add_rvalue_reference<_Tp>::type"
+			],
+			[
+				"forward",
+				"forward<typename _Tp>(typename std::remove_reference<_Tp>::type &&__t)	_Tp &&"
+			],
+			[
+				"LINQ_WHI",
+				"LINQ_WHILE(var, col, tail)	"
+			],
+			[
+				"PROBE",
+				"BSI_PP_PROBE"
+			],
+			[
+				"a",
+				"args"
+			],
+			[
+				"ad",
+				"address"
+			],
+			[
+				"getSe",
+				"getSending"
+			],
+			[
+				"hos",
+				"hostname"
+			],
+			[
+				"setRe",
+				"setReceivingState"
+			],
+			[
+				"setSen",
+				"setSendingState"
+			],
+			[
+				"stat",
+				"state"
+			],
+			[
+				"pau",
+				"pauseFiles"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"fil",
+				"files"
+			],
+			[
+				"Rea",
+				"getRealname"
+			],
+			[
+				"BSI_PROP",
+				"BSI_PROPERTIES(...)	"
+			],
+			[
+				"pa",
+				"pauseFile"
+			],
+			[
+				"se",
+				"sending"
+			],
+			[
+				"receive-st",
+				"receive-stop"
+			],
+			[
+				"re",
+				"receive"
+			],
+			[
+				"bo",
+				"bool	"
+			],
+			[
+				"ho",
+				"hostname"
+			],
+			[
+				"opti",
+				"options_or_null"
+			],
+			[
+				"op",
+				"options_or_null"
+			],
+			[
+				"lab",
+				"labels"
+			],
+			[
+				"typ",
+				"types"
+			],
+			[
+				"forwa",
+				"forward<typename _Tp>(typename std::remove_reference<_Tp>::type &&__t)	_Tp &&"
+			],
+			[
+				"vec",
+				"vector_map_t	"
+			],
+			[
+				"ge",
+				"getValue(const unsigned int row, const unsigned int column) const	std::string"
+			],
+			[
+				"get",
+				"getHeaders() const	StringArray"
+			],
+			[
+				"ma",
+				"make_pair(_T1 &&__x, _T2 &&__y)	pair<typename __decay_and_strip<_T1>::__type, typename __decay_and_strip<_T2>::__type>"
+			],
+			[
+				"map",
+				"map<typename _Key, typename _Tp>	"
+			],
+			[
+				"inclu",
+				"include <header>	"
+			],
+			[
+				"Mess",
+				"MessageServlet	"
+			],
+			[
+				"cont",
+				"contains"
+			],
+			[
+				"htm",
+				"htmlTag"
+			],
+			[
+				"state",
+				"states"
+			],
+			[
+				"di",
+				"display	display: inline"
+			],
+			[
+				"host",
+				"hostname"
+			],
+			[
+				"at",
+				"attr"
+			],
+			[
+				"attr",
+				"attr_or_content"
+			],
+			[
+				"sel",
+				"selectable"
+			],
+			[
+				"att",
+				"attr"
+			],
+			[
+				"fie",
+				"field"
+			],
+			[
+				"so",
+				"sortable"
+			],
+			[
+				"x",
+				"xtypeof"
+			],
+			[
+				"type",
+				"typename"
+			],
+			[
+				"typename_type_",
+				"typename_type_identity"
+			],
+			[
+				"tes",
+				"tester"
+			],
+			[
+				"sor",
+				"sortField"
+			],
+			[
+				"sort",
+				"sort_by"
+			],
+			[
+				"inde",
+				"indexMap"
+			],
+			[
+				"use",
+				"useKey"
+			],
+			[
+				"is",
+				"is_lvalue"
+			],
+			[
+				"Is",
+				"IsRvalue"
+			],
+			[
+				"not",
+				"not_"
+			],
+			[
+				"void",
+				"void_"
+			],
+			[
+				"wra",
+				"wrap_identity"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"id",
+				"id_var"
+			],
+			[
+				"Ser",
+				"SerializeToXml() const	bsi::string"
+			],
+			[
+				"incl",
+				"include <header>	"
+			],
+			[
+				"To",
+				"FromPTree(const PTree &tree)	AbstractMessagePtr"
+			],
+			[
+				"Fr",
+				"fromStdString(const std::string &s)	QString"
+			],
+			[
+				"QST",
+				"QString	"
+			],
+			[
+				"Cons",
+				"ConsoleColor	"
+			],
+			[
+				"Con",
+				"ConsoleColor	"
+			],
+			[
+				"rea",
+				"read_some(const MutableBufferSequence &buffers, boost::system::error_code &ec)	std::size_t"
+			],
+			[
+				"fin",
+				"find(_IIter, _IIter, const _Tp &)	_IIter"
+			],
+			[
+				"trim",
+				"trim_copy(const SequenceT &Input)	SequenceT"
+			],
+			[
+				"tri",
+				"trim_copy(const SequenceT &Input)	SequenceT"
+			],
+			[
+				"Bl",
+				"Blue	bsi::ConsoleColor::Enum"
+			],
+			[
+				"parse",
+				"parse_request(const bsi::string &s)	HttpRequest"
+			],
+			[
+				"par",
+				"parse_request(const bsi::string &s)	HttpRequest"
+			],
+			[
+				"parse_he",
+				"parse_header(Map &m, const Range &lines)	void"
+			],
+			[
+				"Http",
+				"HttpRequest"
+			],
+			[
+				"as",
+				"async_read_some(const MutableBufferSequence &buffers, const ReadHandler &handler)	void"
+			],
+			[
+				"H",
+				"HTTPConnection	(imported, class)"
+			],
+			[
+				"Write",
+				"WriteLine(const T &x, ConsoleColor::Enum color)	bsi::detail::console_t &"
+			],
+			[
+				"remove",
+				"remove_const<typename T>	"
+			],
+			[
+				"boo",
+				"boost::	"
+			],
+			[
+				"BOOST_STAT",
+				"BOOST_STATIC_ASSERT(B)	"
+			],
+			[
+				"Conten",
+				"Content-Length"
+			],
+			[
+				"Writ",
+				"WriteLine(const T &x)	bsi::detail::console_t &"
+			],
+			[
+				"Read",
+				"ReadBuffer(const boost::system::error_code &e, std::size_t size)	void"
+			],
+			[
+				"bu",
+				"buffer(const boost::asio::const_buffer &b)	boost::asio::const_buffers_1"
+			],
+			[
+				"en",
+				"enum_"
+			],
+			[
+				"hea",
+				"header_line	HttpServer::HttpConnection::http_case_enum"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/bsi.sublime-build",
+	"command_palette":
+	{
+		"height": 369.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"clang",
+				"Preferences: SublimeClang Settings – Default"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #include \"…\""
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 132.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/paul/github/Zelda/zelda/requires_out.h",
+		"/home/paul/github/Zelda/zelda/static_assert.h",
+		"/home/paul/github/Zelda/zelda.sublime-project",
+		"/home/paul/Sublime Text 2/PackageSetup.py",
+		"/home/paul/Sublime Text 2/Pristine Packages/Markdown.sublime-package",
+		"/home/paul/.config/sublime-text-2/Packages/SublimeClang/SublimeClang.sublime-settings",
+		"/home/paul/Sublime Text 2/sublime_plugin.py",
+		"/home/paul/Sublime Text 2/PackageSetup.pyc",
+		"/home/paul/github/Zelda/zelda/tokens.pino.h",
+		"/home/paul/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/paul/github/Zelda/zelda/sandbox/result_of.h",
+		"/home/paul/github/Linq/scratch.h",
+		"/home/paul/github/Linq/linq.h",
+		"/home/paul/code/dtran/libTools/include/pool.h",
+		"/home/paul/code/dtran/libMessage/src/GetQueueReply.cpp",
+		"/home/paul/code/dtran/libMessage/include/DequeueMessage.h",
+		"/home/paul/code/dtran/libMessage/include/DequeueReply.h",
+		"/home/paul/code/dtran/libMessage/include/InterfaceRequestMessage.h",
+		"/home/paul/code/dtran/libMessage/src/InterfaceRequestMessage.cpp",
+		"/home/paul/code/dtran/libMessage/include/InterfaceMessage.h",
+		"/home/paul/code/dtran/libMessage/src/DequeueMessage.cpp",
+		"/home/paul/code/dtran/libMessage/src/DequeueReply.cpp",
+		"/home/paul/code/dtran/dtrand/src/Routing.cpp",
+		"/home/paul/code/dtran/dtrand/src/MessageServlet.cpp",
+		"/home/paul/.config/sublime-text-2/Packages/SublimeClang/Default.sublime-keymap",
+		"/home/paul/code/dtran/libMessage/src/PauseMessage.cpp",
+		"/home/paul/code/dtran/libMessage/include/GetQueueMessage.h",
+		"/home/paul/code/dtran/libMessage/src/GetQueueMessage.cpp",
+		"/usr/include/c++/4.6/cstddef",
+		"/home/paul/code/dtran/dtrand/src/Dtrand.cpp",
+		"/home/paul/code/dtran/dtrand/src/Host.cpp",
+		"/home/paul/code/dtran/web/js/toggleButton.js",
+		"/home/paul/code/dtran/web/index.html",
+		"/home/paul/code/dtran/web/js/dtran.js",
+		"/home/paul/code/dtran/dtrand/include/Socket.h",
+		"/home/paul/code/dtran/dtran.sublime-workspace",
+		"/home/paul/code/dtran/dtran.sublime-workspace~",
+		"/home/pfultz/.config/sublime-text-2/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/paul/code/dtran/libXTI/src/xtiQueryResults.cpp",
+		"/home/paul/code/dtran/libMessage/src/AbstractMessage.cpp",
+		"/home/paul/code/dtran/libMessage/include/SerializableMessage.h",
+		"/home/paul/code/dtran/libTools/include/to_json.h",
+		"/home/paul/code/dtran/libMessage/include/AbstractMessage.h",
+		"/tools/lin-static-prod64/include/boost/smart_ptr/shared_ptr.hpp",
+		"/home/pfultz/.config/sublime-text-2/Packages/SublimeGDB/Default.sublime-keymap",
+		"/home/paul/code/dtran/dtran.sublime-project",
+		"/home/pfultz/.config/sublime-text-2/Packages/SublimeGDB/sublimegdb.py",
+		"/home/pfultz/code/dtran/dtrand/include/HttpProtocol.h",
+		"/home/pfultz/code/dtran/dtrand/src/HttpProtocol.cpp",
+		"/home/pfultz/code/dtran/libMessage/include/AbstractMessage.h",
+		"/home/pfultz/code/dtran/libMessage/src/AbstractMessage.cpp",
+		"/home/pfultz/code/dtran/libMessage/include/SerializableMessage.h",
+		"/home/pfultz/code/dtran/dtrand/src/MessageServlet.cpp",
+		"/home/pfultz/code/dtran/web/index.html",
+		"/home/pfultz/code/dtran/web/js/dtran.js",
+		"/home/pfultz/code/dtran/web/old.htm",
+		"/home/pfultz/code/dtran/web/js/utility.js",
+		"/home/pfultz/code/dtran/web/js/ECMA262-5.js",
+		"/home/pfultz/code/dtran/CMakeLists.txt",
+		"/home/pfultz/code/dtran/web/log.htm",
+		"/home/pfultz/code/dtran/gui/src/MainWindow.cpp",
+		"/home/pfultz/code/dtran/dtrand/src/Routing.cpp",
+		"/home/pfultz/code/dtran/libTools/include/to_json.h",
+		"/home/pfultz/.config/sublime-text-2/Packages/SublimeClang/Default.sublime-keymap",
+		"/home/pfultz/code/dtran/libXTI/include/xtiQueryResults.h",
+		"/home/pfultz/code/dtran/libMessage/include/GetQueryMessage.h",
+		"/home/pfultz/code/dtran/libMessage/src/GetQueryMessage.cpp",
+		"/home/pfultz/code/dtran/libMessage/include/GetQueryReply.h",
+		"/home/pfultz/code/dtran/libMessage/src/GetQueryReply.cpp",
+		"/home/pfultz/code/dtran/libTools/include/pp.h",
+		"/home/pfultz/code/dtran/libTools/include/streamable.h",
+		"/home/pfultz/code/dtran/libTools/include/property.h",
+		"/home/pfultz/code/dtran/libTools/include/to_xml.h",
+		"/usr/include/sqlite3.h",
+		"/home/pfultz/code/dtran/web/js/toggleButton.js",
+		"/home/pfultz/code/dtran/dtrand/include/MessageServlet.h",
+		"/home/pfultz/code/dtran/web/js/table.js",
+		"/home/pfultz/code/dtran/dtran.sublime-project",
+		"/home/pfultz/code/dtran/web/test.htm",
+		"/home/pfultz/code/dtran/libTools/include/traits.h",
+		"/home/pfultz/code/dtran/web/config.htm",
+		"/home/pfultz/code/dtran/libTools/include/typeof.h",
+		"/home/pfultz/code/dtran/libTools/include/bsi_config.h",
+		"/home/pfultz/code/dtran/gui/src/CMakeLists.txt",
+		"/home/pfultz/code/dtran/dtrand/src/CMakeLists.txt",
+		"/tools/lin-static-prod64/cmake-utils/use_toolchain_file.cmake",
+		"/tools/lin-static-prod64/cmake-utils/use_other_libraries.cmake",
+		"/home/pfultz/code/dtran/gui/include/CustomPanel.h",
+		"/home/pfultz/code/dtran/dtrand/src/UpdateService.cpp",
+		"/home/pfultz/.config/sublime-text-2/Packages/SublimeClang/SublimeClang.sublime-settings",
+		"/home/pfultz/code/dtran/dtrand/include/HttpServer.h",
+		"/home/pfultz/code/dtran/libTools/include/algorithm.h",
+		"/home/pfultz/code/dtran/dtrand/src/HttpServer.cpp",
+		"/home/pfultz/code/dtran/libMessage/src/InterfaceRequestMessage.cpp",
+		"/home/pfultz/code/dtran/libMessage/include/InterfaceRequestMessage.h",
+		"/home/pfultz/code/dtran/libTools/include/from_ptree.h",
+		"/home/pfultz/code/dtran/dtrand/src/UpdateServlet.cpp",
+		"/home/pfultz/code/dtran/dtrand/src/HttpClient.cpp",
+		"/home/pfultz/code/dtran/libTools/include/utility.h",
+		"/home/pfultz/code/dtran/libPackage/src/CMakeLists.txt",
+		"/home/pfultz/code/dtran/libPackage/include/InstallInfo.h",
+		"/home/pfultz/code/dtran/libPackage/src/InstallInfo.in",
+		"/tools/lin-static-prod64-repo/qt-4.7.2-debug/include/QtCore/qobjectdefs.h",
+		"/home/pfultz/code/dtran/libTools/include/adaptors.h",
+		"/home/pfultz/Documents/boost_1_49_0/boost/phoenix/core/actor.hpp",
+		"/home/pfultz/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/pfultz/code/dtran/notify.py",
+		"/home/pfultz/code/dtran/libTools/include/read_all.h",
+		"/home/pfultz/.config/sublime-text-2/Packages/C++/C++.tmLanguage",
+		"/home/pfultz/.config/sublime-text-2/Packages/C++/Indentation Rules.tmPreferences",
+		"/home/pfultz/.config/sublime-text-2/Packages/C++/C++.sublime-settings",
+		"/home/pfultz/.config/sublime-text-2/Packages/C++/Symbol List - Indent Class Methods.tmPreferences",
+		"/home/pfultz/.config/sublime-text-2/Packages/C++/Symbol List - Prefix Banner Items.tmPreferences",
+		"/home/pfultz/code/dtran/dtrand/include/HttpClient.h",
+		"/home/pfultz/code/dtran/libTools/include/thread_pool.h",
+		"/home/pfultz/code/dtran/libTools/include/md5.h",
+		"/home/pfultz/code/dtran/clang_flags",
+		"/home/pfultz/code/dtran/packages.json",
+		"/usr/local/include/boost/asio/completion_condition.hpp",
+		"/usr/local/include/boost/asio/impl/read.hpp",
+		"/home/pfultz/.config/sublime-text-2/Packages/User/bsi.sublime-build",
+		"/usr/local/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp",
+		"/usr/local/include/boost/mpl/eval_if.hpp",
+		"/usr/local/include/boost/asio/basic_streambuf.hpp",
+		"/home/pfultz/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/pfultz/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/pfultz/code/dtran/dtrand/include/HttpResponse.h",
+		"/home/pfultz/code/dtran/dtrand/src/HostService.cpp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"forward",
+			"bsi",
+			"BSI_",
+			"get_function",
+			"ZELDA_PP_PARAMS(n,",
+			"forward",
+			"BSI_HAS",
+			"ARGS",
+			"MERGE",
+			"ZELDA_ZELDA_PP_H",
+			"bsi::",
+			"bsi",
+			"BSI_",
+			"ZELDA_PP_SEQ_TAIL",
+			"ZELDA_PP_TAIL",
+			"ZELDA_PP_SEQ_HEAD",
+			"ZELDA_PP_HEAD",
+			"zelda::tpl::bool_",
+			"ZELDA_PP_MSVC_CALL",
+			"BSI_DETAIL_PP",
+			"BSI_PP",
+			"RPP",
+			"LINQ_SEQ_OUT",
+			"LINQ_",
+			"ZELDA_PP_STRING_TO_SEQ_KEYWORD",
+			"LINQ_TO_SEQ",
+			"LINQ_KEYWORD",
+			"ZELDA_PP_IS_EMPTY_",
+			"LINQ_",
+			"PP_",
+			"WHEN",
+			"select_many",
+			"LINQ_REPLACE",
+			"pfultz",
+			"LogControl",
+			"GetQueryMessage",
+			" },",
+			"TruncateSize",
+			"name",
+			"BSI_DETAIL_TYPEOF_TYPENAME",
+			"zelda",
+			"ZELDA_",
+			"zelda",
+			"ZELDA_",
+			"zelda",
+			"parse_request",
+			"this",
+			"typedef",
+			"request",
+			"));",
+			"BSI_HAS_DECLTYPE",
+			"to_container_t_converter",
+			"to_container",
+			"front",
+			"ZELDA_",
+			"sending-size",
+			"setStatus",
+			"self",
+			"progress_data",
+			"remainingId",
+			"progressId",
+			"remaining_id",
+			"progress_id",
+			"human_size"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clang":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/pfultz/NetBeansProjects/P2/core/cat.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true
+}

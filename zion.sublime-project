@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/paul/github/Zion"
+		}
+	],
+    "settings":
+    {
+        "sublimeclang_options":
+        [
+            "-std=c++11",
+            "-I/home/paul/github/Zion"
+        ]
+    }
+}
