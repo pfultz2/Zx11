@@ -14,6 +14,8 @@
 #
 # /* CHAOS_PP_VARIADICS */
 #
+# define CHAOS_PP_VARIADICS 1
+#
 # if !defined CHAOS_PP_VARIADICS
 #    if !__cplusplus && __STDC_VERSION__ >= 199901L
 #        define CHAOS_PP_VARIADICS 1

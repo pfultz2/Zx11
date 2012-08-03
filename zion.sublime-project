@@ -10,7 +10,8 @@
         "sublimeclang_options":
         [
             "-std=c++11",
-            "-I/home/paul/github/Zion"
+            "-DZION_TEST",
+            "-I${folder:${project_path:zion.sublime-project}}"
         ]
     }
 }

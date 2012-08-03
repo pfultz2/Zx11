@@ -28,4 +28,7 @@
 #    define CHAOS_IP_IS_VARIADIC_C(...) ()
 # endif
 #
+# /* CHAOS_PP_IS_PAREN */
+# define CHAOS_PP_IS_PAREN CHAOS_PP_IS_VARIADIC
+#
 # endif
