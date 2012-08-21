@@ -9,6 +9,7 @@
 #ifndef ZION_GUARD_REQUIRES_H
 #define	ZION_GUARD_REQUIRES_H
 
+#include <zion/tpl/if.h>
 #include <zion/tpl/fold.h>
 #include <zion/tpl/identity.h>
 #include <zion/tpl/integral_constant.h>
@@ -18,18 +19,6 @@
 
 namespace zion{
 
-template <bool B, class T = void>
-struct enable_if_c 
-{
-    typedef T type;
-};
-
-template <class T>
-struct enable_if_c<false, T> {};
-
-template <class Cond, class T = void> 
-struct enable_if 
-: enable_if_c<Cond::value, T> {};
 
 namespace requires_detail{
 struct not_tag {};
@@ -93,11 +82,11 @@ static_assert(ZION_REQUIRES_CLAUSE(not zion::tpl::bool_<false>)::type::value, "F
 
  
 #define ZION_ERROR_PARENTHESIS_MUST_BE_PLACED_AROUND_THE_RETURN_TYPE(...) __VA_ARGS__>::type
-#define ZION_FUNCTION_REQUIRES(...) typename zion::enable_if<ZION_REQUIRES_CLAUSE(__VA_ARGS__), ZION_ERROR_PARENTHESIS_MUST_BE_PLACED_AROUND_THE_RETURN_TYPE
+#define ZION_FUNCTION_REQUIRES(...) typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__), ZION_ERROR_PARENTHESIS_MUST_BE_PLACED_AROUND_THE_RETURN_TYPE
 
-#define ZION_CLASS_REQUIRES(...) typename zion::enable_if<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
+#define ZION_CLASS_REQUIRES(...) typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
 
-#define ZION_REQUIRES(...) class Zelda_Enable = typename zion::enable_if<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
+#define ZION_REQUIRES(...) class Zelda_Enable = typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
 
 
 #endif	/* ZION_REQUIRES_H */
