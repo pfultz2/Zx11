@@ -12,6 +12,8 @@
 #include <zion/function/adaptor.h>
 #include <zion/is_callable.h>
 #include <zion/returns.h>
+#include <zion/invoke.h>
+#include <tuple>
 
 namespace zion {
 
@@ -30,12 +32,13 @@ struct pipe_closure
     pipe_closure(F f, S && seq) : f(f), seq(std::forward<S>(seq)) {};
 
     template<class A>
-    friend auto operator|(Z && a, pipe_closure<F, Sequence> p) ZION_RETURNS
-    (return zion::invoke(p.f, std::tuple_cat
+    friend auto operator|(A && a, pipe_closure<F, Sequence> p) ZION_RETURNS
+    (zion::invoke(p.f, std::tuple_cat
         (
-            zelda::forward_as_tuple(std::forward<A>(a)), 
+            std::forward_as_tuple(std::forward<A>(a)), 
             std::forward<Sequence>(p.seq)
-        )))
+        ))
+    )
 };
 
 template<class F, class Seq>
@@ -56,7 +59,9 @@ struct pipable_adaptor : function_adaptor_base<F>
 
     template<class... T>
     auto operator()(T && ... x) ZION_RETURN_REQUIRES(not is_callable<F(T&&...)>)
-    (this->get_function()(std::forward<T>(x)...))
+    (
+        details::make_pipe_closure(this->get_function(), std::forward_as_tuple<T...>(std::forward<T>(x)...)) 
+    )
 
     template<class A>
     friend auto operator|(A && x, pipable_adaptor<F> p) ZION_RETURNS

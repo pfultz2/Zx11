@@ -11,13 +11,14 @@
 
 #include <zion/requires.h>
 
+#define ZION_RETURNS(...) -> decltype(__VA_ARGS__) { return (__VA_ARGS__); }
 
-#define ZION_RETURNS(...) \
-        noexcept(noexcept(decltype(__VA_ARGS__)(std::move(__VA_ARGS__)))) \
-        -> decltype(__VA_ARGS__) \
-        { return (__VA_ARGS__); }
+// #define ZION_RETURNS(...) \
+//         noexcept(noexcept(decltype(__VA_ARGS__)(std::move(__VA_ARGS__)))) \
+//         -> decltype(__VA_ARGS__) \
+//         { return (__VA_ARGS__); }
 
 #define ZION_ERROR_RETURN_REQUIRES_NEEDS_AN_EXPRESSION(...) decltype(__VA_ARGS__)>::type { return __VA_ARGS__; }
-#define ZION_RETURN_REQUIRES(...) -> typename zelda::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__), ZION_ERROR_RETURN_REQUIRES_NEEDS_AN_EXPRESSION
+#define ZION_RETURN_REQUIRES(...) -> typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__), ZION_ERROR_RETURN_REQUIRES_NEEDS_AN_EXPRESSION
 
 #endif
