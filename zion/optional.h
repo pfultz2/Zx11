@@ -85,6 +85,11 @@ public:
         }
     }
     
+    ~optional()
+    {
+        this->assign(none);
+    }
+    
     void assign(std::nullptr_t)
     {
         if (this->data != 0)
