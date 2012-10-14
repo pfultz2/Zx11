@@ -20,7 +20,8 @@ struct function_adaptor_base
 {
     F f;
     function_adaptor_base() {};
-    function_adaptor_base(F f) : f(f) {};
+    template<class X>
+    function_adaptor_base(X f) : f(f) {};
 
     F get_function() const
     {
@@ -32,7 +33,8 @@ template<class F>
 struct function_adaptor_base<F, ZION_CLASS_REQUIRES(std::is_empty<F>)>
 {
     function_adaptor_base() {};
-    function_adaptor_base(F) {};
+    template<class X>
+    function_adaptor_base(X) {};
 
     F get_function() const
     {

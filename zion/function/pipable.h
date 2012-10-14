@@ -51,7 +51,8 @@ template<class F>
 struct pipable_adaptor : function_adaptor_base<F>
 {
     pipable_adaptor() {}
-    pipable_adaptor(F f) : function_adaptor_base<F>(f) {}
+    template<class X>
+    pipable_adaptor(X f) : function_adaptor_base<F>(f) {}
 
     template<class... T>
     auto operator()(T && ... x) ZION_RETURN_REQUIRES(is_callable<F(T&&...)>)
