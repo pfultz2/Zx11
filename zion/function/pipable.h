@@ -61,7 +61,7 @@ struct pipable_adaptor : function_adaptor_base<F>
     template<class... T>
     auto operator()(T && ... x) ZION_RETURN_REQUIRES(not is_callable<F(T&&...)>)
     (
-        details::make_pipe_closure(this->get_function(), std::forward_as_tuple<T...>(std::forward<T>(x)...)) 
+        details::make_pipe_closure(this->get_function(), std::forward_as_tuple(std::forward<T>(x)...)) 
     )
 
     template<class A>
