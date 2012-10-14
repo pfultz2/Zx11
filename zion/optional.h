@@ -10,6 +10,7 @@
 #define ZION_GUARD_OPTIONAL_H
 
 #include <utility>
+#include <functional>
 #include <zion/requires.h>
 #include <type_traits>
 #include <cassert>
@@ -35,6 +36,18 @@ struct optional_storage
     }
 };
 
+template<class T>
+struct optional_type
+{
+    typedef T type;
+};
+
+template<class T>
+struct optional_type<std::reference_wrapper<T>>
+{
+    typedef T type;
+};
+
 }
 
 static std::nullptr_t none;
@@ -44,6 +57,8 @@ class optional
 {
     details::optional_storage<T> storage;
     T * data;
+    
+    typedef typename details::optional_type<T>::type value_type;
     
 public:
 
@@ -98,25 +113,18 @@ public:
         }
     }
     
-    template<ZION_REQUIRES(std::is_assignable<T, T>)>
-    void assign(T x)
+    template<class X, ZION_REQUIRES(std::is_assignable<X, X>)>
+    void assign(X x)
     {
         using std::swap;
         swap(*this->data, x);
     }
     
-    template<ZION_REQUIRES(not std::is_assignable<T, T>)>
-    void assign(const T& x)
+    template<class X, ZION_REQUIRES(not std::is_assignable<X, X>)>
+    void assign(X&& x)
     {
         this->assign(none);
-        this->construct(x);
-    }
-    
-    template<ZION_REQUIRES(not std::is_assignable<T, T>)>
-    void assign(T&& x)
-    {
-        this->assign(none);
-        this->construct(std::move(x));
+        this->construct(std::forward<X>(x));
     }
     
     void assign(const optional& rhs)
@@ -134,34 +142,72 @@ public:
         return *this;
     }
     
-    const T& get() const
+    template<class X>
+    optional& operator= (X&& rhs)
+    {
+        this->assign(rhs);
+        return *this;
+    }
+    
+    const value_type& get() const
     {
         assert(this->data != 0);
         return *this->data;
     }
     
-    T& get()
+    value_type& get()
     {
         assert(this->data != 0);
         return *this->data;
     }
     
-    const T& operator*() const
+    bool empty() const
+    {
+        return this->data != 0;
+    }
+    
+    value_type* begin()
+    {
+        if (not this->empty()) return std::addressof(this->get());
+        else return 0;
+    }
+    
+    value_type* end()
+    {
+        if (not this->empty()) return std::addressof(this->get()) + 1;
+        else return 0;
+    }
+    
+    const value_type* begin() const
+    {
+        if (not this->empty()) return std::addressof(this->get());
+        else return 0;
+    }
+    
+    const value_type* end() const
+    {
+        if (not this->empty()) return std::addressof(this->get()) + 1;
+        else return 0;
+    }
+    
+    // Operators
+    
+    const value_type& operator*() const
     {
         return this->get();
     }
     
-    T& operator*()
+    value_type& operator*()
     {
         return this->get();
     }
     
-    const T* operator->() const
+    const value_type* operator->() const
     {
         return this->data;
     }
     
-    T* operator->()
+    value_type* operator->()
     {
         return this->data;
     }
