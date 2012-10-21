@@ -20,6 +20,8 @@ namespace zion {
 namespace detail {
 
     ZION_HAS_MEMBER(equal)
+    ZION_HAS_MEMBER(dereference)
+    ZION_HAS_MEMBER(increment)
     ZION_HAS_MEMBER(decrement)
     ZION_HAS_MEMBER(advance)
     ZION_HAS_MEMBER(distance_to)
@@ -32,7 +34,7 @@ namespace detail {
     }
     
     template<class It1, class It2>
-    ZION_FUNCTION_REQUIRES(not has_equal<It1, bool(It2)>)>
+    ZION_FUNCTION_REQUIRES(not has_equal<It1, bool(It2)>)
     (bool) iterator_equal(const It1& it1, const It2& it2)
     {
         return &(*it1) == &(*it2);
@@ -64,6 +66,7 @@ namespace detail {
     {
     };
     
+    // TODO: Add support for input and output iterators
     template<
     class Iterator,
     class Traits,
@@ -93,13 +96,13 @@ namespace detail {
         template<class T>
         bool operator==(const T& x) const
         {
-            return iterator_equal(*this, x);
+            return iterator_equal(it, x.it);
         }
         
         template<class T>
         bool operator!=(const T& x) const
         {
-            return not iterator_equal(*this, x);
+            return not iterator_equal(it, x.it);
         }
     
     };
@@ -156,7 +159,7 @@ x<__VA_ARGS__>
     
         bool operator<(const iterator_wrapper& x) const
         {
-            return this->it.distance_to(x) < 0;
+            return this->it.distance_to(x.it) < 0;
         }
      
         derived& operator+=(typename Traits::difference_type x)
