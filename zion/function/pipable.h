@@ -31,19 +31,28 @@ struct pipe_closure
     template<class S>
     pipe_closure(F f, S && seq) : f(f), seq(std::forward<S>(seq)) {};
 
-    template<class A>
-    friend auto operator|(A && a, pipe_closure<F, Sequence> p) ZION_RETURNS
-    (zion::invoke(p.f, std::tuple_cat
-        (
-            std::forward_as_tuple(std::forward<A>(a)), 
-            std::forward<Sequence>(p.seq)
-        ))
-    )
+//    template<class A>
+//    friend auto operator|(A && a, pipe_closure<F, Sequence> p) ZION_RETURNS
+//    (zion::invoke(p.f, std::tuple_cat
+//        (
+//            std::forward_as_tuple(std::forward<A>(a)), 
+//            std::forward<Sequence>(p.seq)
+//        ))
+//    );
 };
+
+    template<class A, class F, class Sequence>
+    auto operator|(A && a, pipe_closure<F, Sequence> p) ZION_RETURNS
+    (zion::invoke(p.f, std::tuple_cat
+                  (
+                   std::forward_as_tuple(std::forward<A>(a)),
+                   std::forward<Sequence>(p.seq)
+                   ))
+     );
 
 template<class F, class Seq>
 auto make_pipe_closure(F f, Seq&& seq) ZION_RETURNS
-(pipe_closure<F, Seq&&>(f, seq))
+(pipe_closure<F, Seq&&>(f, std::forward<Seq>(seq)));
 }
 
 
@@ -53,21 +62,27 @@ struct pipable_adaptor : function_adaptor_base<F>
     pipable_adaptor() {}
     template<class X>
     pipable_adaptor(X f) : function_adaptor_base<F>(f) {}
+    
+    ZION_RETURNS_CLASS(function_adaptor_base<F>)
+
+//    template<class... T>
+//    auto operator()(T && ... x) ZION_RETURN_REQUIRES(is_callable<F(T&&...)>)
+//    (ZION_THIS->get_function()(std::forward<T>(x)...));
 
     template<class... T>
-    auto operator()(T && ... x) ZION_RETURN_REQUIRES(is_callable<F(T&&...)>)
-    (this->get_function()(std::forward<T>(x)...))
-
-    template<class... T>
-    auto operator()(T && ... x) ZION_RETURN_REQUIRES(not is_callable<F(T&&...)>)
+    auto operator()(T && ... x) ZION_RETURNS
     (
-        details::make_pipe_closure(this->get_function(), std::forward_as_tuple(std::forward<T>(x)...)) 
-    )
+        details::make_pipe_closure(ZION_THIS->get_function(), std::forward_as_tuple(std::forward<T>(x)...)) 
+    );
 
-    template<class A>
-    friend auto operator|(A && x, pipable_adaptor<F> p) ZION_RETURNS
-    (p.get_function()(std::forward<A>(x)))
+//    template<class A>
+//    friend auto operator|(A && x, pipable_adaptor<F> p) ZION_RETURNS
+//    (p.get_function()(std::forward<A>(x)));
 };
+
+    template<class A, class F>
+    auto operator|(A && x, pipable_adaptor<F> p) ZION_RETURNS
+    (p.get_function()(std::forward<A>(x)));
 }
 
 #endif
