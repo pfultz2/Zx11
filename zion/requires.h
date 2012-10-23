@@ -86,7 +86,7 @@ static_assert(ZION_REQUIRES_CLAUSE(not zion::tpl::bool_<false>)::type::value, "F
 
 #define ZION_CLASS_REQUIRES(...) typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
 
-#define ZION_REQUIRES(...) class Zelda_Enable = typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
+#define ZION_REQUIRES(...) class CHAOS_PP_CAT(Zelda_Enable, __LINE__) = typename zion::tpl::if_<ZION_REQUIRES_CLAUSE(__VA_ARGS__)>::type
 
 
 #endif	/* ZION_REQUIRES_H */
