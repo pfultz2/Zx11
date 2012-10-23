@@ -12,6 +12,7 @@
 #include <utility>
 #include <zion/tpl/integral_constant.h>
 
+namespace zion {
 
 template<class F>
 struct is_callable {};
@@ -34,5 +35,7 @@ struct is_callable<F(Args...)>
 
     typedef zion::tpl::bool_<value> type; 
 };
+
+}
 
 #endif
