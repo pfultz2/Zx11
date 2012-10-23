@@ -35,7 +35,7 @@ template<class F, class Tuple>
 auto invoke(F f, Tuple && t) ZION_RETURNS
 (
     detail::invoke_impl(f, std::forward<Tuple>(t), typename detail::tuple_gens<Tuple>::type() ) 
-)
+);
 
 }
 
