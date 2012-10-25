@@ -78,7 +78,7 @@
 # define CHAOS_PP_STRING_HEAD(string) \
     CHAOS_PP_SPLIT( \
         0, CHAOS_PP_EXPAND( \
-            CHAOS_IP_STRING_HEAD_I CHAOS_PP_PRIMITIVE_CAT(CHAOS_IP_STRING_, string) \
+            CHAOS_IP_STRING_RIM(string) \
         ) \
     ) \
     /**/
@@ -90,13 +90,14 @@
 #
 # define CHAOS_IP_STRING_HEAD_I(x) x, ~
 #
+#
 # /* CHAOS_PP_STRING_TAIL */
 #
 # if CHAOS_PP_VARIADICS
 #    define CHAOS_PP_STRING_TAIL(string) \
         CHAOS_PP_SPLIT( \
             1, CHAOS_PP_EXPAND( \
-                CHAOS_IP_STRING_TAIL_I CHAOS_PP_PRIMITIVE_CAT(CHAOS_IP_STRING_, string) \
+                CHAOS_IP_STRING_RIM(string) \
             ) \
         ) \
         /**/
@@ -110,6 +111,18 @@
         )) \
         /**/
 # endif
+#
+#
+# define CHAOS_IP_STRING_RIM(x) CHAOS_PP_IIF(CHAOS_PP_IS_PAREN(x)) \
+                                (CHAOS_IP_STRING_HEAD_PAREN) \
+                                (CHAOS_IP_STRING_HEAD_TOKEN CHAOS_IP_STRING_HEAD_CAT) \
+                                (x)
+#
+# define CHAOS_IP_STRING_RIM_CAT(x) CHAOS_PP_PRIMITIVE_CAT(CHAOS_IP_STRING_, x)
+#
+# define CHAOS_IP_STRING_RIM_PAREN(x) (x),
+#
+# define CHAOS_IP_STRING_RIM_TOKEN(x) x,
 #
 # if CHAOS_PP_VARIADICS
 #    define CHAOS_IP_STRING_TAIL_I(x) x,
@@ -133,7 +146,7 @@
 #
 # /* CHAOS_PP_STRING_IS_NIL */
 #
-# define CHAOS_PP_STRING_IS_NIL(string) CHAOS_PP_IS_NULLARY(string())
+# define CHAOS_PP_STRING_IS_NIL(string) CHAOS_PP_BITOR(CHAOS_PP_COMPL(CHAOS_PP_IS_PAREN(string)), CHAOS_PP_IS_NULLARY(string()) )
 # define CHAOS_PP_STRING_IS_NIL_ID() CHAOS_PP_STRING_IS_NIL
 #
 # if CHAOS_PP_VARIADICS
