@@ -35,6 +35,7 @@
 # include <chaos/preprocessor/seq/replace.h>
 # include <chaos/preprocessor/seq/reverse.h>
 # include <chaos/preprocessor/seq/size.h>
+# include <chaos/preprocessor/seq/split.h>
 # include <chaos/preprocessor/seq/take.h>
 # include <chaos/preprocessor/seq/to_array.h>
 # include <chaos/preprocessor/seq/to_list.h>
